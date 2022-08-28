@@ -3,7 +3,7 @@ import debounce from 'lodash.debounce';
 import { fetchCountries } from './js/fetchCountries';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-const DEBOUNCE_DELAY = 1700;
+const DEBOUNCE_DELAY = 700;
 const inputRef = document.querySelector('#search-box');
 const filteredCountryListRef = document.querySelector('.country-list');
 const countryInfoRef = document.querySelector('.country-info');
@@ -33,7 +33,7 @@ function renderCountries(country) {
       backOverlay: true,
       backOverlayColor: 'rgba(255, 85, 73, 0.2)',
       fontSize: '18px',
-      timeout: 3000,
+      timeout: 2000,
       clickToClose: true,
       position: 'center-top',
       closeButton: true,
@@ -53,7 +53,7 @@ function onFetchError() {
     backOverlay: true,
     backOverlayColor: 'rgba(255, 85, 73, 0.2)',
     fontSize: '18px',
-    timeout: 3000,
+    timeout: 2000,
     clickToClose: true,
     position: 'center-top',
     closeButton: true,
