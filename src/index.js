@@ -24,7 +24,6 @@ function onInputSearch(e) {
 function renderCountries(country) {
   const filteredCountriesList = country.map(makeCountriesList).join('');
   const filteredCountry = country.map(makeCountry).join('');
-  console.log(country);
   if (country.length > 10) {
     filteredCountryListRef.innerHTML = '';
     countryInfoRef.innerHTML = '';
