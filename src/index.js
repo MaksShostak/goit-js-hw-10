@@ -12,7 +12,9 @@ inputRef.addEventListener('input', debounce(onInputSearch, DEBOUNCE_DELAY));
 
 function onInputSearch(e) {
   e.preventDefault();
-  const countrySearch = e.target.value.trim();
+  const { value } = e.target;
+  const countrySearch = value.trim();
+
   if (!countrySearch.length) {
     filteredCountryListRef.innerHTML = '';
     countryInfoRef.innerHTML = '';
